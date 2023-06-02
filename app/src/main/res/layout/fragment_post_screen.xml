@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/posts"
+    tools:context=".home.post.PostScreen">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/baseline_person_24" />
+
+    <TextView
+
+        android:id="@+id/post"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="310dp"
+        android:autoSizeMaxTextSize="23sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeTextType="uniform"
+        android:background="@xml/border"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/primary" />
+
+    <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="300dp"
+           android:layout_marginTop="460dp"
+
+           android:layout_gravity="center_horizontal"
+           app:startIconDrawable="@drawable/baseline_comment_24"
+           app:startIconTint="@color/primary"
+           app:boxStrokeColor="@color/primary"
+           android:layout_height="wrap_content">
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:hint="Write your comment here"
+               android:inputType="textEmailAddress"
+               android:id="@+id/replyText"
+               android:background="@android:color/transparent"
+               android:layout_height="wrap_content">
+
+           </com.google.android.material.textfield.TextInputEditText>
+       </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:layout_marginTop="470dp"
+
+        android:id="@+id/sendReply"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_send_24"
+        android:layout_marginLeft="310dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/replies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</FrameLayout>

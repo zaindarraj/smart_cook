@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/posts"
+    android:padding="5dp"
+    tools:context=".home.post.PostsScreen">
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      style="@style/Widget.Material3.Button.TextButton"
+      android:layout_gravity="end"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:textSize="21sp"
+      android:id="@+id/signOut"
+      android:text="Sign out"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="280dp"
+        android:layout_height="150dp">
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/post_text"
+          android:layout_width="match_parent"
+          android:hint="Write.."
+          android:layout_height="150dp">
+
+      </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/submit_post"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="460dp"
+    android:layout_height="wrap_content"
+    android:text="Post">
+
+</com.google.android.material.button.MaterialButton>
+
+  <androidx.recyclerview.widget.RecyclerView
+
+      android:id="@+id/posts"
+      android:layout_width="match_parent"
+      android:layout_height="177dp"
+
+      android:layout_marginTop="510dp">
+
+  </androidx.recyclerview.widget.RecyclerView>
+</FrameLayout>

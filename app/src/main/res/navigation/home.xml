@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.smartcook.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_postScreen"
+            app:destination="@id/postScreen" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipeScreen"
+            app:destination="@id/recipeScreen" />
+        <action
+            app:popUpTo="@+id/navigation"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_homeFragment_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/postScreen"
+        android:name="com.example.smartcook.home.post.PostScreen"
+        android:label="fragment_post_screen"
+        tools:layout="@layout/fragment_post_screen" />
+    <fragment
+        android:id="@+id/healthInformationScreen"
+        android:name="com.example.smartcook.home.ml.HealthInformationScreen"
+        android:label="fragment_health_information_screen"
+        tools:layout="@layout/fragment_health_information_screen" />
+    <fragment
+        android:id="@+id/preparationMethodScreen"
+        android:name="com.example.smartcook.home.ml.PreparationMethodScreen"
+        android:label="fragment_preparation_method_screen"
+        tools:layout="@layout/fragment_preparation_method_screen" />
+    <fragment
+        android:id="@+id/recipeScreen"
+        android:name="com.example.smartcook.home.ml.RecipeScreen"
+        android:label="fragment_recipe_screen"
+        tools:layout="@layout/fragment_recipe_screen" >
+        <action
+            android:id="@+id/action_recipeScreen_to_healthInformationScreen"
+            app:destination="@id/healthInformationScreen" />
+        <action
+            android:id="@+id/action_recipeScreen_to_preparationMethodScreen"
+            app:destination="@id/preparationMethodScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.smartcook.registeration.login.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" />
+</navigation>
